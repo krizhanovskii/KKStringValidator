@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'KKStringValidator'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of KKStringValidator.'
+s.summary          = 'Library for easy and fastest string validation based on сciterias.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,18 +17,17 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+s.description      = "For project to project you must validate some input fields, strings, etc, for thay accept some criterias (like length, exist uppercase char, exist number, etc).
+KKStringValidator helps to check string for needed criterias to be accepted."
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/KKStringValidator'
+s.homepage         = "https://github.com/krizhanovskii"
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'k_krizhanovskii' => 'kk@starladder.tv' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/KKStringValidator.git', :tag => s.version.to_s }
+s.license          = 'MIT'
+s.author           = { "k.krizhanovskii" => "k.krizhanovskii@gmail.com" }
+s.source           = { :git => "https://github.com/krizhanovskii/KKStringValidator.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'KKStringValidator/Classes/**/*'
   

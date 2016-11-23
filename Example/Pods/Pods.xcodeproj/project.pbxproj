@@ -11,8 +11,9 @@
 		0A126F19F65DD437901B0541A87D1A54 /* KKStringValidator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AEF8113D80C73BE77D39157EB24433 /* KKStringValidator-dummy.m */; };
 		0E4E14CC0817BC4E5D3AF4D2D3F45D78 /* Pods-KKStringValidator_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE82D415A4CFC99DEF6C546C80436A05 /* Pods-KKStringValidator_Example-dummy.m */; };
 		5121EE8AD0E02E5C7492321C60E60C3F /* Pods-KKStringValidator_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AD469B143F00744F943A5F5F06FE6BF6 /* Pods-KKStringValidator_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		647951882138D1481E0275E47EF3D3A0 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354F0672CCC3D6EC0C9F54FC091D4542 /* ReplaceMe.swift */; };
 		78CF4B97B7A76FF046C5EFFC6D6EE470 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		84C25C4F1DE5A77B005E1DBC /* StringValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C25C4E1DE5A77B005E1DBC /* StringValidator.swift */; };
+		84C25C511DE5A7A4005E1DBC /* Criterias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C25C501DE5A7A4005E1DBC /* Criterias.swift */; };
 		8D0C3F19EBC469A0645BA52A04D9BE5D /* Pods-KKStringValidator_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96725B4548AB319FA586D92AE6956DA4 /* Pods-KKStringValidator_Tests-dummy.m */; };
 		AFA16360E77F3ED481DEF080AC3AFBAE /* KKStringValidator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DBB63A99AF0F1A73349237137E135B4 /* KKStringValidator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB8432EAEEDB8B246C2DA99BD1E6EA98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
@@ -37,7 +38,6 @@
 		2DBB63A99AF0F1A73349237137E135B4 /* KKStringValidator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KKStringValidator-umbrella.h"; sourceTree = "<group>"; };
 		2E3C336DCD526EAAC755013AEDCCFD60 /* KKStringValidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KKStringValidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31135B4E830512613290A1611315BC65 /* Pods-KKStringValidator_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KKStringValidator_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		354F0672CCC3D6EC0C9F54FC091D4542 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		3D4CAFA0668A62556940C9AA7CB4B084 /* Pods-KKStringValidator_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KKStringValidator_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		3F8D1425A2DC7D98E691FC70DFE30552 /* Pods-KKStringValidator_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KKStringValidator_Tests-resources.sh"; sourceTree = "<group>"; };
 		45CB0EBFAE3E97428144D6EFDA538F78 /* KKStringValidator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = KKStringValidator.modulemap; sourceTree = "<group>"; };
@@ -45,6 +45,8 @@
 		669A3B8D5A532AC5F323E90222D6D9A3 /* Pods-KKStringValidator_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KKStringValidator_Tests-umbrella.h"; sourceTree = "<group>"; };
 		6C05EFCFBE098B4654DD2FF45FC48677 /* Pods-KKStringValidator_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KKStringValidator_Example-frameworks.sh"; sourceTree = "<group>"; };
 		7E18D13BC82E6A783584BE6B12811A59 /* KKStringValidator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KKStringValidator-prefix.pch"; sourceTree = "<group>"; };
+		84C25C4E1DE5A77B005E1DBC /* StringValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringValidator.swift; sourceTree = "<group>"; };
+		84C25C501DE5A7A4005E1DBC /* Criterias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Criterias.swift; sourceTree = "<group>"; };
 		8A18AEEB895EB232EC0DDB60A7A9DFE9 /* Pods-KKStringValidator_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KKStringValidator_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		949529128B2879D4D734E0AACF9362CB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -161,7 +163,8 @@
 		9ECADA1AEFB3AEB0940889EE4FE95EF2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				354F0672CCC3D6EC0C9F54FC091D4542 /* ReplaceMe.swift */,
+				84C25C4E1DE5A77B005E1DBC /* StringValidator.swift */,
+				84C25C501DE5A7A4005E1DBC /* Criterias.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -312,6 +315,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					6C3AAFD7D8EB2037970F5F65CA306195 = {
+						LastSwiftMigration = 0810;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -346,7 +354,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A126F19F65DD437901B0541A87D1A54 /* KKStringValidator-dummy.m in Sources */,
-				647951882138D1481E0275E47EF3D3A0 /* ReplaceMe.swift in Sources */,
+				84C25C511DE5A7A4005E1DBC /* Criterias.swift in Sources */,
+				84C25C4F1DE5A77B005E1DBC /* StringValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +453,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 95A7FE8E471397F4C940F754B967A33B /* KKStringValidator.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -465,6 +475,7 @@
 				PRODUCT_NAME = KKStringValidator;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -475,6 +486,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 95A7FE8E471397F4C940F754B967A33B /* KKStringValidator.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -497,6 +509,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
