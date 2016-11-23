@@ -1,0 +1,22 @@
+{
+  "name": "KKStringValidator",
+  "version": "0.1.0",
+  "summary": "A short description of KKStringValidator.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/KKStringValidator",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "k_krizhanovskii": "kk@starladder.tv"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/KKStringValidator.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "KKStringValidator/Classes/**/*"
+}

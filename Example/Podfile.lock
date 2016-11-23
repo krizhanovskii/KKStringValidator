@@ -1,0 +1,16 @@
+PODS:
+  - KKStringValidator (0.1.0)
+
+DEPENDENCIES:
+  - KKStringValidator (from `../`)
+
+EXTERNAL SOURCES:
+  KKStringValidator:
+    :path: ../
+
+SPEC CHECKSUMS:
+  KKStringValidator: 77ded8236144b39cc63a1c21e2552a43de516608
+
+PODFILE CHECKSUM: fc550b792f909ce57ce450171ecb8504243fb256
+
+COCOAPODS: 1.1.0.rc.2
