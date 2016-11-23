@@ -38,7 +38,7 @@ protocol Criteriable {
 
 Then you can `validate` string by choosed `criterias` by calling:
 ```swift
-    StringValidator([\* array of choosed criterias*\]).isValide("\*string to must be validate*\", forceExit: false, result: { validator in
+    StringValidator([\* array of choosed criterias *\]).isValide("\* string to must be validate *\", forceExit: false, result: { validator in
             switch validator {
             /// all criterias was passed
                 case .valid:
@@ -63,15 +63,15 @@ Thats all. Your string was validated and you get result.
 
 ### List of aviable Criterias
 ```swift
-struct LengthCriteria : Criteriable \\ check string length
+struct LengthCriteria : Criteriable { \\code } \\ check string length
 
-struct UppercaseLetterExistCriteria : Criteriable \\ check string contains one or more char in Uppercase
+struct UppercaseLetterExistCriteria : Criteriable { \\code } \\ check string contains one or more char in Uppercase
 
-struct LowercaseLetterExistCriteria : Criteriable \\ check string contains one or more char in Lowercase
+struct LowercaseLetterExistCriteria : Criteriable { \\code } \\ check string contains one or more char in Lowercase
 
-struct NumberExistCriteria : Criteriable \\ check string exist one or more numer
+struct NumberExistCriteria : Criteriable { \\code } \\ check string exist one or more numer
 
-struct RegexpCriteria : Criteriable \\ check string must to RegExp
+struct RegexpCriteria : Criteriable { \\code } \\ check string must to RegExp
 ```
 
 
