@@ -34,15 +34,15 @@ public protocol Criteriable {
 public struct LengthCriteria : Criteriable  {
     public var debugErrorString: String =  debugMessage(LengthCriteria.self, message:"Lenght less than {X}")
     
-    private var lenght : Int
+    private var length : Int
     
     public init(_ lenght : Int) {
-        self.lenght = lenght
-        self.debugErrorString = debugMessage(LengthCriteria.self, message:"Lenght less than 10")
+        self.length = lenght
+        self.debugErrorString = debugMessage(LengthCriteria.self, message:"Lenght less than \(length)")
     }
     
     public func isComform(to value: String) -> Bool {
-        return value.characters.count >= lenght
+        return value.characters.count >= length
     }
 }
 

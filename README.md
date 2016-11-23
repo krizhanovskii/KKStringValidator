@@ -33,7 +33,7 @@ import KKStringValidator
 // code
 
     // Create criterias
-    let lennghtCriteria = LengthCriteria(4)
+    let lennghtCriteria = LengthCriteria(10)
     let regexpCriteria = RegexpCriteria("[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}")
 
     let criterias : [Criteriable] = [lennghtCriteria, UppercaseLetterExistCriteria(), LowercaseLetterExistCriteria(), NumberExistCriteria(), regexpCriteria]
