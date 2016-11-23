@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'KKStringValidator_Example' do
+  pod 'KKStringValidator', :path => '../'
+
+  target 'KKStringValidator_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
