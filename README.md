@@ -74,7 +74,7 @@ protocol Criteriable {
     /// - Parameter value: value to be checked
     /// - Returns: return true if comform
     func isComform(to value:String) -> Bool
-    }
+}
 ```
 
 Then you can `validate` string by choosed `criterias` by calling:
@@ -87,16 +87,11 @@ StringValidator([\* array of choosed criterias *\]).isValide("" \* string to mus
 
             /// first failed criteria
             case .notValid(let criteria):
-            print(criteria.debugErrorString)
 
             /// all failed criterias
             case .notValides(let criterias):
-            print("Criterias that fails:")
-            _ = criterias.map({ 
-                print($0.debugErrorString)
-            })
         }
-    })
+})
 ```
 
 Thats all. Your string was validated and you get result. 
