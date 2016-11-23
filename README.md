@@ -38,7 +38,7 @@ protocol Criteriable {
 
 Then you can `validate` string by choosed `criterias` by calling:
 ```swift
-    StringValidator([\* array of choosed criterias *\]).isValide(\* string to must be validate *\, forceExit: false, result: { validator in
+    StringValidator([\* array of choosed criterias *\]).isValide(" \* string to must be validate *\ ", forceExit: false, result: { validator in
             switch validator {
             /// all criterias was passed
                 case .valid:
