@@ -1,6 +1,0 @@
-framework module KKStringValidator {
-  umbrella header "KKStringValidator-umbrella.h"
-
-  export *
-  module * { export * }
-}

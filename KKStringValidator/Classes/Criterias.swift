@@ -51,6 +51,8 @@ public struct LengthCriteria : Criteriable  {
 public struct UppercaseLetterExistCriteria : Criteriable {
     public var debugErrorString: String = debugMessage(UppercaseLetterExistCriteria.self, message:"no uppercase char exist")
     
+    public init(){}
+    
     public func isComform(to value: String) -> Bool {
         for char in value.characters {
             if String(char).uppercased() == String(char) && Int(String(char)) == nil {
@@ -65,6 +67,8 @@ public struct UppercaseLetterExistCriteria : Criteriable {
 public struct LowercaseLetterExistCriteria : Criteriable {
     public var debugErrorString: String = debugMessage(LowercaseLetterExistCriteria.self, message:"no lowwercase char exist")
     
+    public init(){}
+
     public func isComform(to value: String) -> Bool {
         for char in value.characters {
             if String(char).lowercased() == String(char) && Int(String(char)) == nil {
@@ -79,7 +83,8 @@ public struct LowercaseLetterExistCriteria : Criteriable {
 public struct NumberExistCriteria : Criteriable {
     public var debugErrorString: String = debugMessage(NumberExistCriteria.self, message:"no number char exist")
     
-    
+    public init(){}
+
     public func isComform(to value: String) -> Bool {
         for char in value.characters {
             if let _ = Int(String(char)) {
