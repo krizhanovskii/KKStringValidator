@@ -64,17 +64,17 @@ DEBUG:RegexpCriteria:no mutch to regexp [A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\.[A-Za-
 
 
 ### How its works
-First, you must take needed `criteria` from the `aviable criterias` or create custom `criteria`. All `criterias` must comform `protocol`:
+First, you must take needed `criteria` from the `aviable criterias` or create custom `criteria`. All `criterias` must conform `protocol`:
 ```swift
 protocol Criteriable {
     /// debug string for helps detect problem
     var debugErrorString : String {get}
 
-    /// Check if value comform to criteria
+    /// Check if value conform to criteria
     ///
     /// - Parameter value: value to be checked
-    /// - Returns: return true if comform
-    func isComform(to value:String) -> Bool
+    /// - Returns: return true if conform
+    func isConform(to value:String) -> Bool
 }
 ```
 
@@ -114,12 +114,12 @@ struct RegexpCriteria : Criteriable { \\code } \\ check string must to RegExp
 
 ### How add custom Criteria
 It's easy.
-Just create `struct` and comform protocol `Criteriable`.
+Just create `struct` and conform protocol `Criteriable`.
 ***Example***:
 ```swift
 struct MyCustomCriteria : Criteriable {
     var debugErrorString: String = debugMessage(MyCustomCriteria.self, message:"some debug message")
-    func isComform(to value: String) -> Bool {
+    func isConform(to value: String) -> Bool {
         /* some logic for check */
         return false
     }
