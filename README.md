@@ -38,23 +38,23 @@ protocol Criteriable {
 
 Then you can `validate` string by choosed `criterias` by calling:
 ```swift
-    StringValidator([\* array of choosed criterias *\]).isValide("" \* string to must be validate *\, forceExit: false, result: { validator in
-            switch validator {
+StringValidator([\* array of choosed criterias *\]).isValide("" \* string to must be validate *\, forceExit: false, result: { validator in
+        switch validator {
             /// all criterias was passed
-                case .valid:
-                print("All valid")
+            case .valid:
+            print("All valid")
 
-                /// first failed criteria
-                case .notValid(let criteria):
-                print(criteria.debugErrorString)
+            /// first failed criteria
+            case .notValid(let criteria):
+            print(criteria.debugErrorString)
 
-                /// all failed criterias
-                case .notValides(let criterias):
-                print("Criterias that fails:")
-                _ = criterias.map({ 
-                    print($0.debugErrorString)
-                })
-            }
+            /// all failed criterias
+            case .notValides(let criterias):
+            print("Criterias that fails:")
+            _ = criterias.map({ 
+                print($0.debugErrorString)
+            })
+        }
     })
 ```
 

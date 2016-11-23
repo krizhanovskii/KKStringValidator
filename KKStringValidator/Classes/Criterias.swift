@@ -4,7 +4,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 /// helps create debug message
 ///
