@@ -24,8 +24,8 @@ public protocol Criteriable {
     /// Check if value comform to criteria
     ///
     /// - Parameter value: value to be checked
-    /// - Returns: return true if comform
-    func isComform(to value:String) -> Bool
+    /// - Returns: return true if conform
+    func isСonform(to value:String) -> Bool
 }
 
 
@@ -41,7 +41,7 @@ public struct LengthCriteria : Criteriable  {
         self.debugErrorString = debugMessage(LengthCriteria.self, message:"Lenght less than \(length)")
     }
     
-    public func isComform(to value: String) -> Bool {
+    public func isСonform(to value: String) -> Bool {
         return value.characters.count >= length
     }
 }
@@ -53,7 +53,7 @@ public struct UppercaseLetterExistCriteria : Criteriable {
     
     public init(){}
     
-    public func isComform(to value: String) -> Bool {
+    public func isСonform(to value: String) -> Bool {
         for char in value.characters {
             if String(char).uppercased() == String(char) && Int(String(char)) == nil {
                 return true
@@ -69,7 +69,7 @@ public struct LowercaseLetterExistCriteria : Criteriable {
     
     public init(){}
 
-    public func isComform(to value: String) -> Bool {
+    public func isСonform(to value: String)  -> Bool {
         for char in value.characters {
             if String(char).lowercased() == String(char) && Int(String(char)) == nil {
                 return true
@@ -85,7 +85,7 @@ public struct NumberExistCriteria : Criteriable {
     
     public init(){}
 
-    public func isComform(to value: String) -> Bool {
+    public func isСonform(to value: String) -> Bool {
         for char in value.characters {
             if let _ = Int(String(char)) {
                 return true
@@ -106,7 +106,7 @@ public struct RegexpCriteria : Criteriable {
         self.regexp = regExp
     }
     
-    public func isComform(to value: String) -> Bool {
+    public func isСonform(to value: String) -> Bool {
         let regExptest = NSPredicate(format: "SELF MATCHES %@", regexp)
         return regExptest.evaluate(with: value)
     }

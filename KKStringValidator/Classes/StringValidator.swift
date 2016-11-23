@@ -36,15 +36,15 @@ public struct StringValidator  {
     public func isValide(_ value:String,forceExit:Bool, result:@escaping  (ValidatorResult) -> ()) {
         /// if need force quit
         if forceExit == true {
-            for prediction in self.criterias {
-                if prediction.isComform(to: value) == false {
-                    result(.notValid(criteria: prediction))
+            for criteria in self.criterias {
+                if criteria.isСonform(to: value) == false {
+                    result(.notValid(criteria: criteria))
                     return
                 }
             }
         } else {
             //else find all
-            let tmp = criterias.filter({ $0.isComform(to: value) == false})
+            let tmp = criterias.filter({ $0.isСonform(to: value) == false})
             if tmp.count > 0 {
                 result(.notValides(criterias: tmp))
                 return
