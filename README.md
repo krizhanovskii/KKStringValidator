@@ -13,6 +13,7 @@ pod 'KKStringValidator'
 
 ### Main idea
 For project to project you must validate some `input fields`, `strings`, etc for thay accept some criterias (like `length`, exist `uppercase char`, exist `number`, etc).
+
 ***KKStringValidator*** helps to check `string` for needed `criterias` to be accepted.
 
 ### Core features
