@@ -36,7 +36,7 @@ public struct LengthCriteria : Criteriable  {
     
     private var lenght : Int
     
-    init(_ lenght : Int) {
+    public init(_ lenght : Int) {
         self.lenght = lenght
         self.debugErrorString = debugMessage(LengthCriteria.self, message:"Lenght less than 10")
     }
@@ -96,7 +96,7 @@ public struct RegexpCriteria : Criteriable {
     public var debugErrorString: String
     private var regexp : String
     
-    init(_ regExp:String) {
+    public init(_ regExp:String) {
         self.debugErrorString = debugMessage(RegexpCriteria.self, message:"no mutch to regexp \(regExp)")
         self.regexp = regExp
     }

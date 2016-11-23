@@ -23,7 +23,7 @@ public struct StringValidator  {
     public var criterias: [Criteriable]
     
     ///init
-    init(_ criterias: [Criteriable]) {
+    public init(_ criterias: [Criteriable]) {
         self.criterias = criterias
     }
     
