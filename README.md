@@ -7,7 +7,7 @@ Library for easy and fastest `string` validation based on predictors(rules).
 KKStringValidator is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-```ruby
+```
 pod "KKStringValidator"
 ```
 
@@ -25,37 +25,37 @@ For project to project you must validate some `input fields`, `strings`, etc for
 First, you must take needed `criteria` from the `aviable criterias` or create custom `criteria`. All `criterias` must comform `protocol`:
 ```swift
 protocol Criteriable {
-/// debug string for helps detect problem
-var debugErrorString : String {get}
+    /// debug string for helps detect problem
+    var debugErrorString : String {get}
 
-/// Check if value comform to criteria
-///
-/// - Parameter value: value to be checked
-/// - Returns: return true if comform
-func isComform(to value:String) -> Bool
-}
+    /// Check if value comform to criteria
+    ///
+    /// - Parameter value: value to be checked
+    /// - Returns: return true if comform
+    func isComform(to value:String) -> Bool
+    }
 ```
 
 Then you can `validate` string by choosed `criterias` by calling:
 ```swift
-StringValidator([\* array of choosed criterias*\]).isValide("\*string to must be validate*\", forceExit: false, result: { validator in
-switch validator {
-/// all criterias was passed
-case .valid:
-print("All valid")
+    StringValidator([\* array of choosed criterias*\]).isValide("\*string to must be validate*\", forceExit: false, result: { validator in
+            switch validator {
+            /// all criterias was passed
+                case .valid:
+                print("All valid")
 
-/// first failed criteria
-case .notValid(let criteria):
-print(criteria.debugErrorString)
+                /// first failed criteria
+                case .notValid(let criteria):
+                print(criteria.debugErrorString)
 
-/// all failed criterias
-case .notValides(let criterias):
-print("Criterias that fails:")
-_ = criterias.map({ 
-print($0.debugErrorString)
-})
-}
-})
+                /// all failed criterias
+                case .notValides(let criterias):
+                print("Criterias that fails:")
+                _ = criterias.map({ 
+                    print($0.debugErrorString)
+                })
+            }
+    })
 ```
 
 Thats all. Your string was validated and you get result. 
@@ -63,11 +63,15 @@ Thats all. Your string was validated and you get result.
 
 ### List of aviable Criterias
 ```swift
-struct LengthCriteria : Criteriable \\\ check string length
-struct UppercaseLetterExistCriteria : Criteriable \\\ check string contains one or more char in Uppercase
-struct LowercaseLetterExistCriteria : Criteriable \\\ check string contains one or more char in Lowercase
-struct NumberExistCriteria : Criteriable \\\ check string exist one or more numer
-struct RegexpCriteria : Criteriable \\\ check string must to RegExp
+struct LengthCriteria : Criteriable \\ check string length
+
+struct UppercaseLetterExistCriteria : Criteriable \\ check string contains one or more char in Uppercase
+
+struct LowercaseLetterExistCriteria : Criteriable \\ check string contains one or more char in Lowercase
+
+struct NumberExistCriteria : Criteriable \\ check string exist one or more numer
+
+struct RegexpCriteria : Criteriable \\ check string must to RegExp
 ```
 
 
@@ -77,11 +81,11 @@ Just create `struct` and comform protocol `Criteriable`.
 ***Example***:
 ```swift
 struct MyCustomCriteria : Criteriable {
-var debugErrorString: String = debugMessage(MyCustomCriteria.self, message:"some debug message")
-func isComform(to value: String) -> Bool {
-/* some logic for check */
-return false
-}
+    var debugErrorString: String = debugMessage(MyCustomCriteria.self, message:"some debug message")
+    func isComform(to value: String) -> Bool {
+        /* some logic for check */
+        return false
+    }
 }
 ```
 Thats all. Simple easy :)
