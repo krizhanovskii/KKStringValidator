@@ -21,6 +21,47 @@ For project to project you must validate some `input fields`, `strings`, etc for
 - default `criterias` exist 
 - easy add custom `criteria`
 
+
+
+### Example
+
+```swift
+// import lib
+import KKStringValidator
+
+// code
+
+    // Create criterias
+    let lennghtCriteria = LengthCriteria(4)
+    let regexpCriteria = RegexpCriteria("[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}")
+
+    let criterias : [Criteriable] = [lennghtCriteria, UppercaseLetterExistCriteria(), LowercaseLetterExistCriteria(), NumberExistCriteria(), regexpCriteria]
+
+
+    // validate
+    StringValidator(criterias).isValide("q1Q", forceExit: false, result: { validator in
+        switch validator {
+            case .valid:
+                print("All valid")
+            case .notValid(let criteria):
+                print(criteria.debugErrorString)
+            case .notValides(let criterias):
+                print("Criterias that fails:")
+                _ = criterias.map({ print($0.debugErrorString)
+                })
+            }
+    })
+
+```
+
+Output:
+```swift
+Criterias that fails:
+DEBUG:LengthCriteria:Lenght less than 10
+DEBUG:RegexpCriteria:no mutch to regexp [A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}
+```
+
+
 ### How its works
 First, you must take needed `criteria` from the `aviable criterias` or create custom `criteria`. All `criterias` must comform `protocol`:
 ```swift
@@ -91,43 +132,7 @@ struct MyCustomCriteria : Criteriable {
 Thats all. Simple easy :)
 
 
-### Example
 
-```swift
-    // import lib
-    import KKStringValidator
-
-
-
-    // Create criterias
-    let lennghtCriteria = LengthCriteria(4)
-    let regexpCriteria = RegexpCriteria("[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}")
-    
-    let criterias : [Criteriable] = [lennghtCriteria, UppercaseLetterExistCriteria(), LowercaseLetterExistCriteria(), NumberExistCriteria(), regexpCriteria]
-
-
-    // validate
-    StringValidator(criterias).isValide("q1Q", forceExit: false, result: { validator in
-            switch validator {
-                case .valid:
-                    print("All valid")
-                case .notValid(let criteria):
-                    print(criteria.debugErrorString)
-                case .notValides(let criterias):
-                    print("Criterias that fails:")
-                    _ = criterias.map({ print($0.debugErrorString)
-                    })
-                }
-        })
-    
-```
-
-Output:
-```swift
-Criterias that fails:
-DEBUG:LengthCriteria:Lenght less than 10
-DEBUG:RegexpCriteria:no mutch to regexp [A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}
-```
 
 
 
