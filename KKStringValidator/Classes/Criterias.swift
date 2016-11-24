@@ -58,7 +58,7 @@ public struct UppercaseLetterExistCriteria : Criteriable {
     
     public func isСonform(to value: String) -> Bool {
         for char in value.characters {
-            if String(char).uppercased() == String(char) && Int(String(char)) == nil {
+            if char.isUppercase() == true {
                 return true
             }
         }
@@ -74,12 +74,13 @@ public struct LowercaseLetterExistCriteria : Criteriable {
 
     public func isСonform(to value: String)  -> Bool {
         for char in value.characters {
-            if String(char).lowercased() == String(char) && Int(String(char)) == nil {
+            if char.isLowercase() == true {
                 return true
             }
         }
         return false
     }
+    
 }
 
 /// Check if string contains one or more number
@@ -89,12 +90,8 @@ public struct NumberExistCriteria : Criteriable {
     public init(){}
 
     public func isСonform(to value: String) -> Bool {
-        for char in value.characters {
-            if let _ = Int(String(char)) {
-                return true
-            }
-        }
-        return false
+        let regExptest = NSPredicate(format: "SELF MATCHES %@", ".*[0-9]+.*")
+        return regExptest.evaluate(with: value)
     }
 }
 

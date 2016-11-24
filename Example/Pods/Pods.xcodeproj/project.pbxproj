@@ -12,6 +12,8 @@
 		0E4E14CC0817BC4E5D3AF4D2D3F45D78 /* Pods-KKStringValidator_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE82D415A4CFC99DEF6C546C80436A05 /* Pods-KKStringValidator_Example-dummy.m */; };
 		5121EE8AD0E02E5C7492321C60E60C3F /* Pods-KKStringValidator_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AD469B143F00744F943A5F5F06FE6BF6 /* Pods-KKStringValidator_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78CF4B97B7A76FF046C5EFFC6D6EE470 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		845BA9DE1DE702E200F7B883 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845BA9DD1DE702E200F7B883 /* UITextFieldExtension.swift */; };
+		845BA9E01DE7074A00F7B883 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845BA9DF1DE7074A00F7B883 /* Extensions.swift */; };
 		84C25C4F1DE5A77B005E1DBC /* StringValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C25C4E1DE5A77B005E1DBC /* StringValidator.swift */; };
 		84C25C511DE5A7A4005E1DBC /* Criterias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C25C501DE5A7A4005E1DBC /* Criterias.swift */; };
 		8D0C3F19EBC469A0645BA52A04D9BE5D /* Pods-KKStringValidator_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96725B4548AB319FA586D92AE6956DA4 /* Pods-KKStringValidator_Tests-dummy.m */; };
@@ -45,6 +47,8 @@
 		669A3B8D5A532AC5F323E90222D6D9A3 /* Pods-KKStringValidator_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KKStringValidator_Tests-umbrella.h"; sourceTree = "<group>"; };
 		6C05EFCFBE098B4654DD2FF45FC48677 /* Pods-KKStringValidator_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KKStringValidator_Example-frameworks.sh"; sourceTree = "<group>"; };
 		7E18D13BC82E6A783584BE6B12811A59 /* KKStringValidator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KKStringValidator-prefix.pch"; sourceTree = "<group>"; };
+		845BA9DD1DE702E200F7B883 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		845BA9DF1DE7074A00F7B883 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		84C25C4E1DE5A77B005E1DBC /* StringValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringValidator.swift; sourceTree = "<group>"; };
 		84C25C501DE5A7A4005E1DBC /* Criterias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Criterias.swift; sourceTree = "<group>"; };
 		8A18AEEB895EB232EC0DDB60A7A9DFE9 /* Pods-KKStringValidator_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KKStringValidator_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 			children = (
 				84C25C4E1DE5A77B005E1DBC /* StringValidator.swift */,
 				84C25C501DE5A7A4005E1DBC /* Criterias.swift */,
+				845BA9DD1DE702E200F7B883 /* UITextFieldExtension.swift */,
+				845BA9DF1DE7074A00F7B883 /* Extensions.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -353,7 +359,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845BA9E01DE7074A00F7B883 /* Extensions.swift in Sources */,
 				0A126F19F65DD437901B0541A87D1A54 /* KKStringValidator-dummy.m in Sources */,
+				845BA9DE1DE702E200F7B883 /* UITextFieldExtension.swift in Sources */,
 				84C25C511DE5A7A4005E1DBC /* Criterias.swift in Sources */,
 				84C25C4F1DE5A77B005E1DBC /* StringValidator.swift in Sources */,
 			);
