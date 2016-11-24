@@ -61,7 +61,42 @@ Criterias that fails:
 DEBUG:LengthCriteria:Lenght less than 10
 DEBUG:RegexpCriteria:no mutch to regexp [A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}
 ```
+### UITextFieldExtension
+Also created `extension` for `UITextField`.
 
+```swift 
+/// extension for UITextField for validation
+extension UITextField {
+/// function for validating textField text
+///
+/// - Parameters:
+///   - criterias: array of criterias
+///   - forceExit: flag for force extit. default in false
+///   - result: ValidatorResult object
+public func validate(_ criterias : [Criteriable], forceExit:Bool = false, result:@escaping (ValidatorResult)->Void) {
+    //code
+}
+}
+```
+
+Example of usage:
+
+```swift
+func textFieldDidEndEditing(_ textField: UITextField) {
+    textField.validate([LengthCriteria(4)], result: { result in
+        switch result {
+            case .valid:
+                print("All valid")
+            case .notValid(let criteria):
+                print(criteria.debugErrorString)
+            case .notValides(let criterias):
+                print("Criterias that fails:")
+                _ = criterias.map({ print($0.debugErrorString)
+                })
+        }
+    })
+}
+```
 
 ### How its works
 First, you must take needed `criteria` from the `aviable criterias` or create custom `criteria`. All `criterias` must conform `protocol`:

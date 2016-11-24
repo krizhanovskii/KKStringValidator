@@ -11,7 +11,7 @@ import Foundation
 
 extension Character {
     //chek if char is lowercase
-    func isLowercase() -> Bool {
+    public func isLowercase() -> Bool {
         let set = CharacterSet.lowercaseLetters
         
         if let scala = UnicodeScalar(String(self)) {
@@ -22,7 +22,7 @@ extension Character {
     }
     
     //chek if char is uppercase
-    func isUppercase() -> Bool {
+    public func isUppercase() -> Bool {
         let set = CharacterSet.uppercaseLetters
         
         if let scala = UnicodeScalar(String(self)) {

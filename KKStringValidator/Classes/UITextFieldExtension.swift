@@ -19,7 +19,7 @@ extension UITextField {
     ///   - criterias: array of criterias
     ///   - forceExit: flag for force extit. default in false
     ///   - result: ValidatorResult object
-    func validate(_ criterias : [Criteriable], forceExit:Bool = false, result:@escaping (ValidatorResult)->Void) {
+    public func validate(_ criterias : [Criteriable], forceExit:Bool = false, result:@escaping (ValidatorResult)->Void) {
         StringValidator(criterias).isValide(self.text ?? "", forceExit: forceExit, result: result)
     }
 }
