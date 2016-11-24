@@ -115,7 +115,6 @@ public struct RegexpCriteria : Criteriable {
     }
 }
 
-
 /// Check if string length between to values
 public struct RangeCriteria : Criteriable {
     
@@ -125,6 +124,9 @@ public struct RangeCriteria : Criteriable {
     private var to: Int
     
     public init(_ from:Int = 0, to:Int = 0) {
+        guard to>from else {
+            fatalError("from value (\(from)) must be less than to value(\(to))")
+        }
         self.debugErrorString = debugMessage(RangeCriteria.self, message:"string length must be from \(from) to \(to)")
         self.from = from
         self.to = to
@@ -135,4 +137,28 @@ public struct RangeCriteria : Criteriable {
     }
 }
 
+
+/// check if first char is Letter. Also optional check big letter
+public struct FirstCharIsLetterCriteria : Criteriable {
+    
+    public var debugErrorString: String
+    private var isBig : Bool
+    
+    public init(big:Bool = false) {
+        var mess = "first char must be letter"
+        if big == true {
+            mess += " and in uppercase"
+        }
+        self.debugErrorString = debugMessage(FirstCharIsLetterCriteria.self, message:mess)
+        self.isBig = big
+    }
+    
+    public func isСonform(to value: String) -> Bool {
+        if value.characters.count == 0 {
+            return false
+        }
+        
+        return Int(String(value.characters.first!)) == nil && (self.isBig == false ? true : String(value.characters.first!).uppercased() == String(value.characters.first!))
+    }
+}
 
