@@ -155,7 +155,7 @@ public struct FirstCharIsLetterCriteria : Criteriable {
             return false
         }
         
-        return Int(String(value.characters.first!)) == nil && (self.isBig == false ? true : String(value.characters.first!).uppercased() == String(value.characters.first!))
+        return Int(String(value.characters.first!)) == nil && (self.isBig == false ? true : value.characters.first!.isUppercase())
     }
 }
 
