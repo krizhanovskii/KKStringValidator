@@ -31,6 +31,9 @@ public protocol Criteriable {
 
 
 /// list
+
+
+/// Check string length
 public struct LengthCriteria : Criteriable  {
     public var debugErrorString: String =  debugMessage(LengthCriteria.self, message:"Lenght less than {X}")
     
@@ -47,7 +50,7 @@ public struct LengthCriteria : Criteriable  {
 }
 
 
-
+/// Check if string contains one or more Uppercase char
 public struct UppercaseLetterExistCriteria : Criteriable {
     public var debugErrorString: String = debugMessage(UppercaseLetterExistCriteria.self, message:"no uppercase char exist")
     
@@ -63,7 +66,7 @@ public struct UppercaseLetterExistCriteria : Criteriable {
     }
 }
 
-
+/// Check if string contains one or more lowercase char
 public struct LowercaseLetterExistCriteria : Criteriable {
     public var debugErrorString: String = debugMessage(LowercaseLetterExistCriteria.self, message:"no lowwercase char exist")
     
@@ -79,7 +82,7 @@ public struct LowercaseLetterExistCriteria : Criteriable {
     }
 }
 
-
+/// Check if string contains one or more number
 public struct NumberExistCriteria : Criteriable {
     public var debugErrorString: String = debugMessage(NumberExistCriteria.self, message:"no number char exist")
     
@@ -95,7 +98,7 @@ public struct NumberExistCriteria : Criteriable {
     }
 }
 
-
+/// Check if string conform to RegExp
 public struct RegexpCriteria : Criteriable {
     
     public var debugErrorString: String
@@ -110,5 +113,26 @@ public struct RegexpCriteria : Criteriable {
         let regExptest = NSPredicate(format: "SELF MATCHES %@", regexp)
         return regExptest.evaluate(with: value)
     }
-    
 }
+
+
+/// Check if string length between to values
+public struct RangeCriteria : Criteriable {
+    
+    public var debugErrorString: String
+    
+    private var from : Int
+    private var to: Int
+    
+    public init(_ from:Int = 0, to:Int = 0) {
+        self.debugErrorString = debugMessage(RangeCriteria.self, message:"string length must be from \(from) to \(to)")
+        self.from = from
+        self.to = to
+    }
+    
+    public func isСonform(to value: String) -> Bool {
+        return value.characters.count > from && value.characters.count <= to
+    }
+}
+
+

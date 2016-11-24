@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import KKStringValidator
 
 class ViewController: UIViewController {
 
