@@ -7,9 +7,9 @@ import Foundation
 
 /// Validator result object
 ///
-/// - valid: everething if ok
+/// - valid: everething is ok
 /// - notValid: find not valid prediction
-/// - notValide: find not valid  array of predictions
+/// - notValide: find not valid array of predictions
 public enum ValidatorResult {
     case valid
     case notValid(criteria:Criteriable)
@@ -30,8 +30,8 @@ public struct StringValidator  {
     /// validate redictors to comform
     ///
     /// - Parameters:
-    ///   - value: string than must be validate
-    ///   - forceExit: if true -> stop process when first validation fail. else create array of fail criterias
+    ///   - value: string that must be validated
+    ///   - forceExit: if true -> stop process when first validation is fail. else create array of fail criterias
     ///   - result: result of validating
     public func isValide(_ value:String,forceExit:Bool, result:@escaping  (ValidatorResult) -> ()) {
         /// if need force quit

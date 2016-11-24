@@ -35,13 +35,13 @@ public protocol Criteriable {
 
 /// Check string length
 public struct LengthCriteria : Criteriable  {
-    public var debugErrorString: String =  debugMessage(LengthCriteria.self, message:"Lenght less than {X}")
+    public var debugErrorString: String =  debugMessage(LengthCriteria.self, message:"Length less than {X}")
     
     private var length : Int
     
     public init(_ lenght : Int) {
         self.length = lenght
-        self.debugErrorString = debugMessage(LengthCriteria.self, message:"Lenght less than \(length)")
+        self.debugErrorString = debugMessage(LengthCriteria.self, message:"Length less than \(length)")
     }
     
     public func isСonform(to value: String) -> Bool {
@@ -52,7 +52,7 @@ public struct LengthCriteria : Criteriable  {
 
 /// Check if string contains one or more Uppercase char
 public struct UppercaseLetterExistCriteria : Criteriable {
-    public var debugErrorString: String = debugMessage(UppercaseLetterExistCriteria.self, message:"no uppercase char exist")
+    public var debugErrorString: String = debugMessage(UppercaseLetterExistCriteria.self, message:"no uppercase char exists")
     
     public init(){}
     
@@ -68,7 +68,7 @@ public struct UppercaseLetterExistCriteria : Criteriable {
 
 /// Check if string contains one or more lowercase char
 public struct LowercaseLetterExistCriteria : Criteriable {
-    public var debugErrorString: String = debugMessage(LowercaseLetterExistCriteria.self, message:"no lowwercase char exist")
+    public var debugErrorString: String = debugMessage(LowercaseLetterExistCriteria.self, message:"no lowercase char exists")
     
     public init(){}
 
@@ -84,7 +84,7 @@ public struct LowercaseLetterExistCriteria : Criteriable {
 
 /// Check if string contains one or more number
 public struct NumberExistCriteria : Criteriable {
-    public var debugErrorString: String = debugMessage(NumberExistCriteria.self, message:"no number char exist")
+    public var debugErrorString: String = debugMessage(NumberExistCriteria.self, message:"no number char exists")
     
     public init(){}
 
@@ -105,7 +105,7 @@ public struct RegexpCriteria : Criteriable {
     private var regexp : String
     
     public init(_ regExp:String) {
-        self.debugErrorString = debugMessage(RegexpCriteria.self, message:"no mutch to regexp \(regExp)")
+        self.debugErrorString = debugMessage(RegexpCriteria.self, message:"no match to regexp \(regExp)")
         self.regexp = regExp
     }
     
